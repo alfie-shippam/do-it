@@ -1,0 +1,130 @@
+:root {
+    --color-primary: rgb(41, 41, 41);
+    --color-secondary: rgb(71, 71, 71);
+    --color-accent: rgb(6, 167, 125);
+    --color-accent-hover: rgb(15, 189, 142);
+    --color-white: rgb(255, 255, 255);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    background-color: var(--color-primary);
+    font-family: 'Roboto', serif;
+}
+
+h1 {
+    color: var(--color-accent);
+    text-align: center;
+}
+
+#to-do-container {
+    border-radius: 1rem;
+    /* box-shadow: 0 4px 40px rgb(0, 0, 0, .25); */
+    padding: 2.5rem;
+}
+
+#add-task {
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-white);
+    border-radius: 0.5rem;
+    align-items: center;
+}
+
+input {
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1rem 2rem;
+    font-family: 'Roboto', serif;
+    color: var(--color-primary);
+    font-weight: 400;
+    font-size: 0.8rem;
+    outline: none;
+    max-width: 12rem;
+}
+
+::placeholder {
+    color: var(--color-secondary);
+    opacity: 1;
+    font-family: 'Roboto', serif;
+}
+
+::-ms-input-placeholder {
+    color: var(--color-secondary);
+    font-family: 'Roboto', serif;
+}
+
+#add {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    transition: background-color 0.3s;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    border: none;
+}
+
+#add:hover {
+    background-color: var(--color-accent-hover);
+}
+
+#task-list {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin: 0.3rem;
+    color: var(--color-white);
+    background-color: transparent;
+}
+
+.task-text {
+    margin-left: 0.5rem;
+    width: 100%;
+}
+
+#checked {
+    color: var(--color-secondary);
+}
+
+.checkmark g {
+    fill: var(--color-secondary);
+    transition: fill 0.3s;
+    cursor: pointer;
+}
+
+.checkmark g:hover {
+    fill: var(--color-accent);
+}
+
+.remove-task {
+    color: var(--color-secondary);
+    cursor: pointer;
+}
+
+.remove-task svg g {
+    fill: var(--color-secondary);
+    transition: fill 0.3s;
+}
+
+.remove-task svg g:hover {
+    fill: var(--color-accent);
+}
+
+
+.remove-task:hover {
+    color: var(--color-accent);
+}
