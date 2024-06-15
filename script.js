@@ -12,16 +12,13 @@ document.addEventListener('DOMContentLoaded', function() {
             removeButton.classList.add('remove-task');
 
             let removeIcon = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-            removeIcon.setAttribute("width", "15px");
-            removeIcon.setAttribute("height", "15px");
-            removeIcon.setAttribute("viewBox", "0 0 32 32");
+            removeIcon.setAttribute("width", "10px");
+            removeIcon.setAttribute("height", "10px");
+            removeIcon.setAttribute("viewBox", "0 0 490 490");
             removeIcon.innerHTML = `
-                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                    <g id="Icon-Set-Filled" fill="#000000">
-                        <path d="M13.657,21.24 C14.048,21.63 14.048,22.27 13.657,22.66 C13.267,23.05 12.633,23.05 12.242,22.66 L8.006,18.42 L3.74,22.69 C3.346,23.08 2.708,23.08 2.314,22.69 C1.921,22.29 1.921,21.65 2.314,21.26 L6.58,16.99 L2.344,12.76 C1.953,12.37 1.953,11.73 2.344,11.34 C2.733,10.95 3.367,10.95 3.758,11.34 L7.994,15.58 L12.292,11.28 C12.686,10.89 13.323,10.89 13.717,11.28 C14.11,11.68 14.11,12.31 13.717,12.71 L9.42,17.01 L13.657,21.24 L13.657,21.24 Z M8,1 C16.837,1 24,8.16 24,17 C24,25.84 16.837,33 8,33 C-0.837,33 -8,25.84 -8,17 C-8,8.16 -0.837,1 8,1 L8,1 Z" id="cross-circle">
-                        </path>
-                    </g>
-                </g>
+<polygon points="456.851,0 245,212.564 33.149,0 0.708,32.337 212.669,245.004 0.708,457.678 33.149,490 245,277.443 456.851,490 
+                                   489.292,457.678 277.331,245.004 489.292,32.337 "/>
+                               
             `;
             removeButton.appendChild(removeIcon);
             removeButton.addEventListener('click', removeTask);
@@ -75,4 +72,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     button.addEventListener('click', addTask);
+
+    input.addEventListener('keypress', function(event) {
+        if (event.key === 'Enter') {
+            addTask();
+        }
+    });
 });

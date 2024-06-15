@@ -89,6 +89,14 @@ input {
     margin: 0.3rem;
     color: var(--color-white);
     background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    padding: 0.1rem 0.3rem 0.1rem 0.3rem;
+    border-radius: 0.2rem;
+}
+
+.task:hover {
+    background-color: rgb(15, 189, 142, 0.1);
 }
 
 .task-text {
@@ -96,8 +104,13 @@ input {
     width: 100%;
 }
 
-#checked {
+.checked {
     color: var(--color-secondary);
+    text-decoration: line-through;
+}
+
+.complete-task {
+    display: flex;
 }
 
 .checkmark g {
@@ -111,20 +124,14 @@ input {
 }
 
 .remove-task {
-    color: var(--color-secondary);
     cursor: pointer;
 }
 
-.remove-task svg g {
+.remove-task svg  {
     fill: var(--color-secondary);
     transition: fill 0.3s;
 }
 
-.remove-task svg g:hover {
-    fill: var(--color-accent);
-}
-
-
-.remove-task:hover {
-    color: var(--color-accent);
+.remove-task svg:hover {
+    fill: red;
 }
